@@ -362,7 +362,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 18px;
   position: absolute;
   z-index: 40;
   background-color: transparent;
@@ -422,8 +422,9 @@ body {
 }
 @media (max-width: 1024px) {
   .openbox .content {
+    left: 0;
     bottom: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 21px;
     transform-origin: bottom;
     flex-direction: column-reverse;
   }
