@@ -1,0 +1,112 @@
+.burger__wrapper {
+  width: 100%;
+  border-radius: 60px;
+  backdrop-filter: blur(26px);
+  background: rgba(255, 255, 255, 0.2);
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+
+  @media (max-width: 1024px) {
+    display: flex;
+  }
+
+  .burger__button {
+    border: 1px solid #141414;
+    border-radius: 41px;
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 20px;
+      height: 1px;
+      background-color: #141414;
+      border-radius: 2px;
+    }
+  }
+
+  .burger__phone {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #141414;
+    border-radius: 41px;
+    background-color: transparent;
+
+    svg {
+      color: #141414;
+    }
+  }
+}
+
+.header__nav.is-active + .burger__wrapper {
+  background-color: #141414;
+  transition: background-color 0.9s linear;
+
+  .burger__button {
+    border: 1px solid #fff;
+    background-color: #141414;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s linear, border-color 0.2s linear;
+
+    span {
+      display: block;
+      width: 20px;
+      height: 1px;
+      background-color: #fff;
+      border-radius: 2px;
+      transition: background-color 0.2s linear;
+    }
+  }
+
+  .burger__phone {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 41px;
+    background-color: transparent;
+
+    svg {
+      color: #fff;
+    }
+  }
+}
+
+.header__nav.is-active + .burger__wrapper .burger__button span {
+  position: absolute;
+}
+
+.header__nav.is-active + .burger__wrapper .burger__button span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.header__nav.is-active + .burger__wrapper .burger__button span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.header__nav.is-active + .burger__wrapper .burger__button span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+
