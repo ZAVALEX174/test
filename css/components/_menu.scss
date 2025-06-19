@@ -119,14 +119,6 @@
             justify-content: center;
           }
         }
-
-        &:nth-last-of-type(1) {
-          display: none;
-
-          @media (max-width: 1024px) {
-            display: flex;
-          }
-        }
       }
 
       &:nth-last-of-type(1) {
@@ -141,6 +133,18 @@
         }
 
       }
+    }
+
+    &-list:nth-of-type(1) {
+
+      li:nth-last-of-type(1) {
+        display: none;
+
+        @media (max-width: 1024px) {
+          display: flex;
+        }
+      }
+
     }
 
 
